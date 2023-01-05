@@ -16,8 +16,8 @@ minima:
 
   # generate social links in footer
   social_links:
-    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jekyll" }
-    - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/suhan-kacholia" }
+    - { platform: twitter,        user_url: "https://twitter.com/SuhanKacholia1" }
   
 header_pages:
   - writing.md
