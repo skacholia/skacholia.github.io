@@ -6,5 +6,6 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 title: Data
+permalink: /data
 layout: home
 ---
