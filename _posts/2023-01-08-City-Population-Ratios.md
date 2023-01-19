@@ -84,4 +84,4 @@ Then, I plot the results:
 I chose to look at the top 20 and bottom 20 by ratio, yielding the following graphs:
 
 ![ratio.png]({{site.baseurl}}/_posts/ratio.png)
-![ratio2.png]({{site.baseurl}}/_posts/ratio2.png)
+![ratiobottom20.png]({{site.baseurl}}/_posts/ratiobottom20.png)
