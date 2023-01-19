@@ -83,7 +83,7 @@ Then, I plot the results:
 
 I chose to look at the top 20 and bottom 20 by ratio, yielding the following graphs:
 
-![ratio](/skacholia/assets/ratio.png)
-![ratio2](/skacholia/assets/ratio2.png)
+![ratio](/skacholia.github.io/assets/ratio.png)
+![ratio2](/skacholia.github.io/assets/ratio2.png)
 
 
