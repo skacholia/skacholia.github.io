@@ -1,5 +1,6 @@
 ---
-published: false
+published: true
+layout: post
 ---
 Atlanta has a population of only 496,461 — smaller than cities like Fresno, Kansas City, and Milwaukee. Miami, Florida is even smaller than Atlanta, with a population of only 439,890, comparable to Virginia Beach and Raleigh 
 
