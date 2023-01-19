@@ -85,3 +85,18 @@ I chose to look at the top 20 and bottom 20 by ratio, yielding the following gra
 
 ![ratio.png]({{site.baseurl}}/_posts/ratio.png)
 ![ratiobottom20.png]({{site.baseurl}}/_posts/ratiobottom20.png)
+
+As expected, Miami and Atlanta are near the top, with ratios of around 14 and 12, respectively. But bigger than both is Riverside, California. The reason why also explains why this ratio isn't a completely ideal metric for measuring suburbanization. As mentioned previously, the Census Bureau uses counties to measure metro population. Counties in the Western US are usually larger and more scarce than those in the East (Arizona, for example, only has 15 counties, compared to Georgia's 159). This is exemplified by the Riverside–San Bernardino–Ontario metro area, which only consists of two counties. These counties, however, are huge:
+
+![inland-empire-map.jpeg]({{site.baseurl}}/_posts/inland-empire-map.jpeg)
+
+Of course, a metro area that large will contain a large amount of people compared to the small city of Riverside. Thus, the ratio is heavily confounded by how big counties are.
+
+I think tweaking the ratio, maybe by accounting for size of metro area, could still provide a decent, if rough, measure of suburbanization in the US. As far as I can tell, this doesn not currently exist in any easily accessible way. That might the subject of a future post, however.
+
+Thank you for reading! Here is the full graph of ratios:
+
+![full.png]({{site.baseurl}}/_posts/full.png)
+
+
+
