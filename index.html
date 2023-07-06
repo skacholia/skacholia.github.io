@@ -3,18 +3,22 @@
   <head>
     <title>My Portfolio</title>
     <style>
-      #myCanvas {
-        position: absolute;
+      body {
         margin: 0;
         padding: 0;
+        overflow: hidden;
       }
-      /* Add styles for your tabs and other elements */
+
+      #myCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     </style>
   </head>
   <body>
-
     <div id="myCanvas"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="sketch.js"></script> 
+    <script src="sketch.js"></script>
   </body>
 </html>
