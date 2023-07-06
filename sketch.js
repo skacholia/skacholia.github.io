@@ -27,8 +27,8 @@ function draw() {
   let mappedZoom = map(mouseY, 0, height, 0.1, 1);
 
   // Blend mouse-controlled rotation with time-based rotation
-  let blendedFix = (mappedFix * 0.7) + (frameCount * 0.01 % 360) * 0.2;
-  createPattern(blendedFix, mappedZoom);
+  let blendedFix = (mappedFix * 0.5) + (frameCount * 0.01 % 360) * 0.15;
+  createPattern(blendedFix + 10, mappedZoom);
 }
 
 // Function to draw starry background
