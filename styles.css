@@ -1,0 +1,56 @@
+body, html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 60px;
+    font-size: 35px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+}
+
+a:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+.right a {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#p5Canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
