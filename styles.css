@@ -2,7 +2,7 @@ body, html {
     background-color: white;
     margin: 0;
     padding: 0;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     overflow: hidden;
 }
 
@@ -25,7 +25,7 @@ a {
     color: black;
     text-decoration: none;
     position: relative;
-    font-family: 'Cormorant Garamond', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 a:before {
