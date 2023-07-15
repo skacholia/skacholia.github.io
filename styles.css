@@ -23,7 +23,7 @@ nav ul {
     gap: 30px;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px){
     header {
       padding: 20px 0; /* Adjust the desired padding for mobile */
       flex-direction: column;
