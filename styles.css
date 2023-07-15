@@ -19,14 +19,26 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Allow multiple rows on smaller screens */
     gap: 30px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen {
     header {
-        font-size: 50px; /* Adjust the desired font size for mobile */
+      padding: 20px 0; /* Adjust the desired padding for mobile */
+      flex-direction: column;
+      align-items: center;
     }
-}
+  
+    .left {
+      font-size: 50px; /* Adjust the desired font size for mobile */
+      margin-bottom: 20px; /* Add margin below the name for spacing */
+    }
+  
+    .right {
+      font-size: 20px; /* Adjust the desired font size for mobile */
+    }
+  }
 
 a {
     color: black;
