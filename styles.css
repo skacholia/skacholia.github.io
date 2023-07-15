@@ -8,6 +8,7 @@ body, html {
 
 header {
     display: flex;
+    position: sticky;
     justify-content: space-between;
     padding: 50px 120px;
     font-size: 35px;

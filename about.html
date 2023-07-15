@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display SVG in HTML</title>
+  <style>
+    /* CSS styles */
+    img {
+      width: 200px; /* Adjust the desired width */
+      height: auto; /* Maintain the aspect ratio */
+      filter: brightness(0%) contrast(100%); /* Convert the SVG to black */
+      user-drag: none; /* Disable dragging of the image */
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none; /* Disable touch callout (long press on touch devices) */
+      transform: rotate(10deg); /* Adjust the desired rotation angle */
+    }
+
+    .original-image {
+      display: none; /* Hide the original image */
+    }
+  </style>
+</head>
+<body>
+  <img src="outline-az.svg" alt="SVG Image" class="svg-image">
+  <img src="outline-az.svg.svg" alt="SVG Image" class="original-image">
+</body>
+</html>
