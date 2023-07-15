@@ -12,6 +12,14 @@
       -webkit-user-drag: none;
       -webkit-touch-callout: none; /* Disable touch callout (long press on touch devices) */
       transform: rotate(10deg); /* Adjust the desired rotation angle */
+      animation: rotate 5s infinite linear;
+      transform-style: preserve-3d;
+    }
+
+    /* CSS styles */
+    @keyframes rotate {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
     }
 
     .original-image {
