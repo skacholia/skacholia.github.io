@@ -23,7 +23,7 @@ nav ul {
     gap: 1.875rem;
 }
 
-@media only screen and (max-width: 37.5em){
+@media only screen and (max-width: 600px){
     header {
       padding: 1.25rem 0;
       flex-direction: column;
