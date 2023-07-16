@@ -28,6 +28,20 @@ h1 {
   font-size: 1.875rem;
 }
 
+/* Add this code */
+@media screen and (max-width: 600px){
+  .window {
+      position: relative;
+      margin: 1rem auto;
+      left: auto;
+      top: auto;
+      height: auto;
+  }
+  body, html {
+      overflow-y: auto;
+  }
+}
+
 @media only screen and (max-width: 600px){
     header {
       padding: 1.25rem 0;
@@ -42,6 +56,26 @@ h1 {
   
     .right {
       font-size: 1.875rem;
+    }
+
+    .window {
+      position: relative;
+      margin: 1rem auto;
+      left: auto;
+      top: auto;
+      height: auto;
+    }
+
+    .hidden {
+      display: block;
+    }
+
+    .toggle-btn {
+      display: none;
+    }
+  
+    body, html {
+        overflow-y: auto;
     }
   }
 
