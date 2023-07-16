@@ -39,6 +39,6 @@ function createPattern(fix, zoom) {
 }
 
 function mouseClicked() {
-  fix = random(240, 250); // Change 'fix' to a random value between 150 and 350 when mouse is clicked
+  fix = random(240, 280); // Change 'fix' to a random value between 150 and 350 when mouse is clicked
   console.log(fix); // Print the current value of 'fix' in the browser console
 }

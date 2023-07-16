@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Display SVG in HTML</title>
-  <style>
-    /* CSS styles */
-    img {
-      width: 200px; /* Adjust the desired width */
-      height: auto; /* Maintain the aspect ratio */
-      filter: brightness(0%) contrast(100%); /* Convert the SVG to black */
-      user-drag: none; /* Disable dragging of the image */
-      -webkit-user-drag: none;
-      -webkit-touch-callout: none; /* Disable touch callout (long press on touch devices) */
-      transform: rotate(10deg); /* Adjust the desired rotation angle */
-      animation: rotate 5s infinite linear;
-      transform-style: preserve-3d;
-    }
+    <title>Draggable Windows</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/52cbd737ac.js" crossorigin="anonymous"></script>
+    <script>
+      $(function () {
+        $(".window").draggable({
+            stack: ".window",
+            stop: function(event, ui) {
+                var parent = ui.helper.parent();
+                var pw = parent.width();
+                var ph = parent.height();
+                var left = Math.round(100 * parseFloat(ui.position.left) / parseFloat(pw)) + '%';
+                var top = parseFloat(ui.position.top) + 'PX';
+                console.log("Left: " + left + ", Top: " + top);
+            }
+        });
 
-    /* CSS styles */
-    @keyframes rotate {
-      0% { transform: rotateY(0deg); }
-      100% { transform: rotateY(360deg); }
-    }
-
-    .original-image {
-      display: none; /* Hide the original image */
-    }
-  </style>
+        $(".toggle-btn").on("click", function() {
+            $(this).siblings(".content").toggleClass("hidden");
+        });
+      });
+  </script>
 </head>
 <body>
-  <img src="outline-az.svg" alt="SVG Image" class="svg-image">
-  <img src="outline-az.svg.svg" alt="SVG Image" class="original-image">
+    <div class="home"><a href="index.html">suhan kacholia</a></div>
+    <div class="window window1">
+        <h1 class="content"><b>About</b>
+        <p class="content hidden">I'm a student at UGA studying Cognitive Science, AI, and Economics.</p>
+        <h1 class="content hidden"><b>Interests</b></h1>
+        <p class="content hidden">Stuff</p>
+        <span class="toggle-btn">&lt; &gt;</span>
+    </div>
+    <div class="window window2">
+        <a href="https://twitter.com/SuhanKacholia1"> <i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/suhan-kacholia/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/skacholia"><i class="fa-brands fa-github"></i></a>
+        <a href="https://open.spotify.com/user/skacholia"><i class="fa-brands fa-spotify"></i></a>
+    </div>
+    <div class="window window3">
+        <h1 class="content">Window 3 - Content 1</h1>
+        <p class="content hidden">Window 3 - Content 2</p>
+        <span class="toggle-btn">&lt; &gt;</span>
+    </div>
 </body>
 </html>
