@@ -23,6 +23,11 @@ nav ul {
     gap: 1.875rem;
 }
 
+h1 {
+  text-align: center;
+  font-size: 1.875rem;
+}
+
 @media only screen and (max-width: 600px){
     header {
       padding: 1.25rem 0;
@@ -79,7 +84,7 @@ a:hover:before {
 
 .window1 {
   width: 24rem;
-  height: 25.75rem;
+  height: 16.75rem;
   top: 20%;
   left: 10%;
 }
@@ -97,7 +102,7 @@ a:hover:before {
 
 .window3 {
   width: 18.75rem;
-  height: 18.75rem;
+  height: 20.75rem;
   top: 48%;
   left: 46%;
 }
@@ -122,12 +127,12 @@ a:hover:before {
   font-family: 'Cormorant Garamond', serif;
 }
 
-.hidden {
-  display: none;
+.content {
+  font-family: 'DM Sans';
 }
 
-h1 {
-  font-size: 2.5rem;
+.hidden {
+  display: none;
 }
 
 .fa-brands {
