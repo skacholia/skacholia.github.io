@@ -8,25 +8,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/52cbd737ac.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
-      $(function () {
-        $(".window").draggable({
-            stack: ".window",
-            stop: function(event, ui) {
-                var parent = ui.helper.parent();
-                var pw = parent.width();
-                var ph = parent.height();
-                var left = Math.round(100 * parseFloat(ui.position.left) / parseFloat(pw)) + '%';
-                var top = parseFloat(ui.position.top) + 'PX';
-                console.log("Left: " + left + ", Top: " + top);
-            }
+        $(function () {
+          if ($(window).width() > 600) {
+              $(".window").draggable({
+                  stack: ".window",
+                  stop: function(event, ui) {
+                      var parent = ui.helper.parent();
+                      var pw = parent.width();
+                      var ph = parent.height();
+                      var left = Math.round(100 * parseFloat(ui.position.left) / parseFloat(pw)) + '%';
+                      var top = parseFloat(ui.position.top) + 'PX';
+                      console.log("Left: " + left + ", Top: " + top);
+                  }
+              });
+          }
+          
+          $(".toggle-btn").on("click", function() {
+              $(this).siblings(".content").toggleClass("hidden");
+          });
         });
-
-        $(".toggle-btn").on("click", function() {
-            $(this).siblings(".content").toggleClass("hidden");
-        });
-      });
-  </script>
+      </script>      
 </head>
 <body>
     <div class="home"><a href="index.html">suhan kacholia</a></div>
@@ -45,12 +48,6 @@
             <li>Improving American governance</li>
         </ul>
         <span class="toggle-btn">&lt; &gt;</span>
-    </div>
-    <div class="window window2">
-        <a href="https://twitter.com/SuhanKacholia1"> <i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/suhan-kacholia/"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/skacholia"><i class="fa-brands fa-github"></i></a>
-        <a href="https://open.spotify.com/user/skacholia"><i class="fa-brands fa-spotify"></i></a>
     </div>
     <div class="window window3">
         <div class="content">
@@ -84,6 +81,12 @@
             </ul>
         </div>     
         <span class="toggle-btn">&lt; &gt;</span>
+    </div>
+    <div class="window window2">
+        <a href="https://twitter.com/SuhanKacholia1"> <i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/suhan-kacholia/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/skacholia"><i class="fa-brands fa-github"></i></a>
+        <a href="https://open.spotify.com/user/skacholia"><i class="fa-brands fa-spotify"></i></a>
     </div>
 </body>
 </html>

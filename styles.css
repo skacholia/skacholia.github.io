@@ -1,111 +1,31 @@
 body, html {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    font-family: 'Cormorant Garamond', serif;
-    overflow: hidden;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  overflow: hidden;
 }
 
 header {
-    display: flex;
-    position: sticky;
-    justify-content: space-between;
-    padding: 3.125rem 7.5rem;
-    font-size: 2.1875rem;
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  padding: 3.125rem 7.5rem;
+  font-size: 2.1875rem;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.875rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
 }
 
 h1 {
   text-align: center;
   font-size: 1.875rem;
-}
-
-/* Add this code */
-@media screen and (max-width: 600px){
-  .window {
-      position: relative;
-      margin: 1rem auto;
-      left: auto;
-      top: auto;
-      height: auto;
-  }
-  body, html {
-      overflow-y: auto;
-  }
-}
-
-@media only screen and (max-width: 600px){
-    header {
-      padding: 1.25rem 0;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .left {
-      font-size: 1.875rem;
-      margin-bottom: 1.25rem;
-    }
-  
-    .right {
-      font-size: 1.875rem;
-    }
-
-    .window {
-      position: relative;
-      margin: 1rem auto;
-      left: auto;
-      top: auto;
-      height: auto;
-    }
-
-    .hidden {
-      display: block;
-    }
-
-    .toggle-btn {
-      display: none;
-    }
-  
-    body, html {
-        overflow-y: auto;
-    }
-  }
-
-a {
-    color: black;
-    text-decoration: none;
-    position: relative;
-}
-
-a:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0.0625rem;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    visibility: hidden;
-    transition: all 0.1s ease-in-out;
-}
-
-a:hover:before {
-    visibility: visible;
-    width: 100%;
-}
-
-#p5Canvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
 }
 
 .window {
@@ -123,6 +43,13 @@ a:hover:before {
   left: 10%;
 }
 
+.window3 {
+  width: 18.75rem;
+  height: 20.75rem;
+  top: 48%;
+  left: 46%;
+}
+
 .window2 {
   width: 13.625rem;
   height: 3.625rem;
@@ -132,13 +59,6 @@ a:hover:before {
   justify-content: center; 
   align-items: center; 
   flex-wrap: wrap;
-}
-
-.window3 {
-  width: 18.75rem;
-  height: 20.75rem;
-  top: 48%;
-  left: 46%;
 }
 
 .toggle-btn {
@@ -172,4 +92,85 @@ a:hover:before {
 .fa-brands {
   font-size: 2.5em;
   padding: 0.2em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.0625rem;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+a:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+#p5Canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+      padding: 1.25rem 0;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .left {
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .right {
+    font-size: 1.875rem;
+  }
+
+  .window {
+      border: none; 
+      background-color: transparent; 
+      position: relative;
+      margin: 1rem auto;
+      left: auto;
+      top: auto;
+      width: auto;
+      height: auto;
+  }
+
+  .hidden {
+      display: block;
+  }
+
+  .toggle-btn {
+      display: none;
+  }
+
+  .home {
+    position: relative;
+    left: 0;
+    padding:  0 0 2rem 0;
+    transform: none;
+    text-align: center;
+  }
+
+  .content {
+    font-family: 'Cormorant Garamond';
+  }
+
+  body, html {
+      overflow-y: auto;
+  }
 }
