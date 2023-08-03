@@ -39,26 +39,63 @@ h1 {
 .window1 {
   width: 24rem;
   height: 16.75rem;
-  top: 20%;
-  left: 10%;
-}
-
-.window3 {
-  width: 18.75rem;
-  height: 20.75rem;
-  top: 48%;
-  left: 46%;
+  top: 30%;
+  left: 38%;
 }
 
 .window2 {
   width: 13.625rem;
   height: 3.625rem;
-  top: 30%;
-  left: 70%;
+  top: 20%;
+  left: 20%;
   display: flex;
   justify-content: center; 
   align-items: center; 
   flex-wrap: wrap;
+}
+
+.window3 {
+  width: 18.75rem;
+  height: 20.75rem;
+  top: 40%;
+  left: 70%;
+}
+
+.map-window {
+  width: 300px; /* This should match the map width */
+  height: 300px; /* Map height + header height */
+  top: 50%;
+  left: 15%;
+}
+
+.map-header {
+  text-align: center;
+  padding: 0; /* This is arbitrary. Adjust as required */
+  margin: 0;  /* Add this */
+}
+
+#mapContainer {
+  width: 250px;
+  height: 250px;
+}
+
+/* Style the pins */
+circle.pin {
+  fill: white;
+  cursor: pointer;
+  stroke:black;
+  stroke-width: 1px;
+}
+/* Style the popup text */
+.popup-box {
+  display: none;  
+  background-color: #f9f9f9;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-size: 12px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .toggle-btn {
@@ -79,10 +116,6 @@ h1 {
   transform: translateX(-50%);
   font-size: 2.1875rem;
   font-family: 'Cormorant Garamond', serif;
-}
-
-.content {
-  font-family: 'DM Sans';
 }
 
 .hidden {

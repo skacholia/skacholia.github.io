@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="places.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="header"><a href="index.html">home</a></div>
+
+        <div class="section" id="athens">
+            <h2>athens</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_atlanta_image1.jpg" alt="Atlanta Image 1">
+                <img src="path_to_atlanta_image2.jpg" alt="Atlanta Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                Athens, Georgia is home of the University of Georgia, where I go to school.
+            </div>
+        </div>
+
+        <div class="section" id="berlin">
+            <h2>berlin</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                I visited Berlin last summer.  
+            </div>
+        </div>
+
+        <div class="section" id="budapest">
+            <h2>budapest</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                I visted Budapest last summer. 
+            </div>
+        </div>
+        <div class="section" id="chandler">
+            <h2>chandler</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                I grew up in Arizona. 
+            </div>
+        </div>
+        <div class="section" id="miami">
+            <h2>miami</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                I visited Miami this spring.
+            </div>
+        </div>
+        <div class="section" id="nyc">
+            <h2>new york city</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                NYC is great
+            </div>
+        </div>
+        <div class="section" id="oxford">
+            <h2>oxford</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                I studied abroad in Oxford
+            </div>
+        </div>
+        <div class="section" id="seoul">
+            <h2>seoul</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                South Korea is my favorite place
+            </div>
+        </div>
+        <div class="section" id="dc">
+            <h2>washington, d.c.</h2>
+            <div class="gallery" data-current="0">
+                <img class="active" src="path_to_newyork_image1.jpg" alt="New York Image 1">
+                <img src="path_to_newyork_image2.jpg" alt="New York Image 2">
+                <!-- Add more images as required -->
+                <div class="arrow left" onclick="moveSlide(this.parentElement, -1)">&#8249;</div>
+                <div class="arrow right" onclick="moveSlide(this.parentElement, 1)">&#8250;</div>
+            </div>
+            <div class="description">
+                D.C. is cool
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function moveSlide(container, direction) {
+            const images = container.querySelectorAll('img');
+            const current = parseInt(container.getAttribute('data-current'));
+            images[current].classList.remove('active');
+
+            const newIndex = (current + direction + images.length) % images.length;
+            images[newIndex].classList.add('active');
+            container.setAttribute('data-current', newIndex);
+        }
+    </script>
+
+</body>
+
+</html>
