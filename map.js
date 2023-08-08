@@ -1,6 +1,3 @@
-const width = 300;
-const height = 300;
-
 const cities = [
     { name: "berlin", coordinates: [13.4050, 52.5200] },
     { name: "budapest", coordinates: [19.0402, 47.4979] },
@@ -13,87 +10,50 @@ const cities = [
     { name: "seoul", coordinates: [126.9780, 37.5665] }
 ];
 
-const projection = d3.geoOrthographic()
-    .scale(112)
-    .translate([width / 2, height / 2])
-    .clipAngle(90)
-    .precision(0.1);
+document.addEventListener("DOMContentLoaded", function() {
 
-const path = d3.geoPath().projection(projection);
+    const svg = d3.select(".box-places-right svg");
+    const width = svg.node().getBoundingClientRect().width;
+    const height = svg.node().getBoundingClientRect().height;
 
-function drawPins(svg, pins) {
-    svg.selectAll(".pin").remove();
+    const projection = d3.geoEckert4()
+        .translate([width / 2, height / 2]);
 
-    const pinPositions = pins.map(({ name, coordinates }) => {
-        const position = projection(coordinates);
-        return {
-            position,
-            name,
-            visible: position !== null
-        };
-    });
-
-    svg.selectAll("circle.pin")
-        .data(pinPositions)
-        .enter()
-        .filter(({ visible }) => visible)
-        .append("circle")
-        .attr("class", "pin")
-        .attr("cx", d => d.position[0])
-        .attr("cy", d => d.position[1])
-        .attr("r", 5)
-        .attr("cursor", "pointer")
-        .on("click", ({ name }) => {
-            window.location.href = `places.html#${name}`;
-        });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const svg = d3.select("#mapContainer")
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height);
+    const path = d3.geoPath().projection(projection);
 
     d3.json("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson")
-        .then(data => {
-            svg.selectAll("path")
-                .data(data.features)
-                .enter()
-                .append("path")
-                .attr("d", path)
-                .attr("fill", "#000");
+    .then(function(geojsonData) {
+        
+        projection.fitSize([width, height], geojsonData);
 
-            drawPins(svg, cities);
+        svg.selectAll("path")
+            .data(geojsonData.features)
+            .enter()
+            .append("path")
+            .attr("d", path)
+            .attr("fill", "black");
 
-            svg.call(d3.drag()
-                .on("start", function () {
-                    const [x, y] = d3.mouse(this);
-                    const { width, height } = d3.select("#mapContainer").node().getBoundingClientRect();
+        // Adding pins for cities
+        const pins = svg.selectAll("circle")
+            .data(cities)
+            .enter()
+            .append("circle")
+            .attr("cx", d => projection(d.coordinates)[0])
+            .attr("cy", d => projection(d.coordinates)[1])
+            .attr("r", 5)  // Radius of the pin
+            .attr("fill", "white")  // Color of the pin
+            .attr("stroke", "black")  // Outline of the pin
+            .attr("cursor", "pointer")  // Change cursor on hover
+            .on("click", function(d) {
+                window.location.href = `places.html#${d.name}`;
+            });
 
-                    if (x < 0 || x > width || y < 0 || y > height) {
-                        d3.event.sourceEvent.stopPropagation();
-                        return;
-                    }
+        // Add hover text with city name
+        pins.append("title")
+            .text(d => d.name);
 
-                    this.__chart__ = {
-                        rotate: projection.rotate(),
-                        scale: projection.scale()
-                    };
-                })
-                .on("drag", function () {
-                    const { dx, dy } = d3.event;
-                    const rotate = projection.rotate();
-                    const sensitivity = 0.25;
+    }).catch(error => {
+        console.error("Error fetching the geoJSON data:", error);
+    });
 
-                    projection.rotate([
-                        rotate[0] + dx * sensitivity,
-                        rotate[1] - dy * sensitivity,
-                        rotate[2]
-                    ]);
-
-                    svg.selectAll("path").attr("d", path);
-                    drawPins(svg, cities);
-                }));
-        })
-        .catch(console.error);
 });
