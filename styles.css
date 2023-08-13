@@ -24,9 +24,9 @@ p, li{
     background-color: white;
     position: sticky;
     top: 0;
-    width: 200px;
-    padding: 20px;
-    border-right: 1px dashed darkgray;
+    width: 14.375em;
+    padding: 1.25em;
+    border-right: 0.0625em dashed darkgray;
     z-index: 1;
 }
 
@@ -44,7 +44,7 @@ a {
 .sidebar nav ul {
     font-size: 1.25em;
     padding: 0;
-    margin-top: 0.5em;
+    margin-top: 0.3125em;
     list-style: none;
 }
 
@@ -52,7 +52,7 @@ a:before {
     content: "";
     position: absolute;
     width: 0;
-    height: 1px;
+    height: 0.0625em;
     bottom: 0;
     left: 0;
     background-color: black;
@@ -64,34 +64,34 @@ a:hover:before {
     width: 100%;
 }
 
-.name a:before, .name a:hover:before {
+.no_underline:before, .no_underline:hover:before {
     visibility: hidden;
 }
 
 .main {
     flex-grow: 1;
     overflow: auto;
-    padding: 10px;
+    padding: 0.625em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .box {
-    border: 1px dashed darkgray;
-    padding: 20px;
-    margin: 10px;
+    border: 0.0625em dashed darkgray;
+    padding: 1.25em;
+    margin: 0.625em;
     box-sizing: border-box;
 }
 
 .box {
-    flex-shrink: 1; /* Allow the box to shrink if necessary */
-    flex-grow: 1;   /* Allow the box to grow if necessary */
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
 .box-about, .box-books {
-    min-height: 2em;  /* Just an example, adjust as needed */
-    overflow-y: auto; /* This will add a scrollbar if the content overflows vertically */
+    min-height: 2em;
+    overflow-y: auto;
 }
 
 .box-about {
@@ -113,8 +113,16 @@ a:hover:before {
 }
 
 .box-places-left {
-    flex: 3; /* 3 parts of the 5-part division */
-    max-width: calc(60% - 10px);
+    flex: 3;
+    max-width: calc(60% - 0.625em);
+}
+
+.box.box-places-left img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height:auto;
 }
 
 .box-places-right {
@@ -127,26 +135,25 @@ a:hover:before {
     margin: auto;
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
     .container {
         flex-direction: column;
     }
 
     .sidebar {
         width: 100%;
-        padding: 10px 0;
+        padding: 0.625em 0;
         text-align: center;
     }
 
     .sidebar nav ul li {
         display: inline;
-        margin: 0 1em; /* Center and space the items */
+        margin: 0 1em;
     }
 
     .box-about, .box-places, .box-books {
         flex-basis: 100%;
-        border: none; /* Removing dashed borders */
+        border: none;
     }
 
     .bottom-row {

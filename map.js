@@ -10,8 +10,7 @@ const cities = [
     { name: "seoul", coordinates: [126.9780, 37.5665] }
 ];
 
-document.addEventListener("DOMContentLoaded", function() {
-
+function drawMap() {
     const svg = d3.select(".box-places-right svg");
     const width = svg.node().getBoundingClientRect().width;
     const height = svg.node().getBoundingClientRect().height;
@@ -56,4 +55,10 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Error fetching the geoJSON data:", error);
     });
 
-});
+}
+
+// Initial draw
+drawMap();
+window.addEventListener("DOMContentLoaded", drawMap);
+// Redraw map on window resize
+window.addEventListener("resize", drawMap);
