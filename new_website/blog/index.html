@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="blog-list">
+    <h1>blog</h1>
+    
+    <div class="blog-grid">
+        {% for post in site.posts %}
+        <div class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </div>
+        <div class="post-date">
+            {{ post.date | date: "%B %d, %Y" }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<nav style="text-align: center; margin-top: 4rem;">
+    <a href="{{ '/' | relative_url }}">← back home</a>
+</nav> 

@@ -1,0 +1,14 @@
+title: Suhan Kacholia
+email: suhan.kacholia03@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "skacholia.github.io" # your site's production URL
+github_username: skacholia
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Blog settings
+permalink: /blog/:year/:month/:day/:title/ 
