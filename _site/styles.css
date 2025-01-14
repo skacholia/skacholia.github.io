@@ -130,4 +130,38 @@ h2 {
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+}
+
+/* Add to your existing CSS */
+.post-content a {
+    text-decoration: underline;
+}
+
+/* Keep the hover state consistent */
+.post-content a:hover {
+    text-decoration: underline;
+}
+
+/* Add to your existing CSS */
+.post-content ul, .post-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+.minimal-nav {
+    margin-bottom: 1rem;
+}
+
+.minimal-nav a {
+    text-decoration: none;
+}
+
+/* Remove the old bottom nav styles */
+nav.minimal-nav {
+    text-align: left;
+    margin-top: 0;
 } 

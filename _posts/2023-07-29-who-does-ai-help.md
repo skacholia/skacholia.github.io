@@ -47,6 +47,7 @@ Psychologists usually measure personality in terms of the Big 5 Factors:
 * Agreeableness (friendliness and cooperation), and  
 * Neuroticism (emotional instability and anxiety)
 
+
 Again, none of these traits are *inherently* good or bad—but still, in general, certain traits are more conducive towards success in the modern economy compared to others. A [2021 meta-analysis](https://www.econstor.eu/bitstream/10419/236201/1/GLO-DP-0902.pdf) suggests that Openness, Conscientiousness, and Extraversion are positively associated with higher earnings, while Agreeableness and Neuroticism are negatively associated. This research is correlational and not causal, and the relationships are nuanced. Still, the bigger picture makes intuitive sense. In highly-paid sectors where creativity is prized, like tech, openness is a valuable trait. Conscientiousness, meanwhile, enables individuals to obtain good grades and do diligent work. Neuroticism, linked to anxiety and low self-confidence, is less helpful.
 
 I predict that trait Openness will become even more of a useful personality trait for the AI age. First, technological progress is moving fast, and keeping up with change is easier if you are more interested in new ideas. Second, trait Openness is linked to creativity and intellectual breadth, which is even more useful because of generative AI, for reasons already discussed.
